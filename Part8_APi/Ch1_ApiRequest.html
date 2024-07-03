@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+</head>
+
+<body style="background-color: #212121;">
+    0 UNSENT Client has been created. open() not called yet.
+    1 OPENED open() has been called.
+    2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+    3 LOADING Downloading; responseText holds partial data.
+    4 DONE The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/abhishek2000singh'
+    const xhr = new XMLHttpRequest() //creating the object for reference
+    xhr.open('GET', requestUrl)  //client has been created but not called
+
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState);
+        //detecting change in the state
+        if(xhr.readyState === 4){
+            // console.log(xhr.responseText);
+            // console.log(this.responseText); both does the same thing
+            const data = JSON.parse(this.responseText); //convert string to json
+            //bcz in general its type of (data) will be string
+            // console.log(data);  
+            // console.log(typeof data);  will show string if json.parse is not used 
+            console.log(data.following);           
+            console.log(data.followers);           
+            
+        }
+    }
+    xhr.send(); //when send()-> then client is called
+</script>
+
+</html>

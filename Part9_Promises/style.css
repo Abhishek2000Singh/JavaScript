@@ -1,0 +1,27 @@
+/* h1{
+    text-align: center;
+    background-color: red;
+}
+p{
+    text-align: center;
+    background-color: #212121;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.harsh{
+    /* text-align: center; */
+    /* align-items: center; */
+    background-color: #212121;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+}
+
+.btn{
+    display: flex;
+    justify-content: center ;
+}

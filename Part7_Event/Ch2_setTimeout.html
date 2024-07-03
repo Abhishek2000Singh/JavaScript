@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyn Code</title>
+</head>
+
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //setTimeout means - give me that mentioned amount of time and i will perform the given task once
+
+    //setInterval means - give me the interval in which after every interval of time i will perform the task repetitively or the quantity it is mentioned
+
+    //1st way-
+    // setTimeout(function() {
+    //     console.log("hi Harshit");
+    // }, 2000);
+
+    //2nd WAY-:
+    const sayHarshit = function () {
+        console.log("hi Harshit");
+    }
+    setTimeout(sayHarshit, 2000)
+
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = " best Js Series"
+    }
+    // setTimeout(changeText,4000)
+
+    //After setting setTimeOut one also need to know how to stop the timeout before its amount of time finishes..therefore we need set the reference of the timeout and then clear it eg is mentioned below-:
+
+    const changeMe = setTimeout(changeText, 4000);
+    // clearTimeout(changeMe);
+
+    const stop = document.querySelector("#stop").
+        addEventListener('click', function (e) {
+            clearTimeout(changeMe);
+            console.log("Stopped..");
+
+        })
+
+
+</script>
+
+</html>

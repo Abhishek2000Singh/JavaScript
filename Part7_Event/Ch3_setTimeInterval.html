@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <h1>Chai aur JavaScript </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+
+
+    //setInterval means - give me the interval in which after every interval of time i will perform the task repetitively or the quantity it is mentioned
+
+    //1ST WAY-:
+    // setInterval(function () {
+    //     console.log("Harshit", Date.now());        
+    // },1000)
+
+
+    //2ND WAY:-
+    // const sayDate = function () {
+    //     console.log("Harshit", Date.now());        
+    // }
+
+    // setInterval(sayDate,1000)
+
+
+    //taking extra parameter and working on it.. CAN ALSO HAVE 3RD PARAMS
+    const sayDate = function (str) {
+        console.log(str, Date.now());
+    }
+    let intervalId;
+    const start = document.querySelector("#start").addEventListener('click', function (e) {
+        console.log("Started..");
+        intervalId = setInterval(sayDate, 1000, "hello")
+    })
+
+    const stop = document.querySelector("#stop").addEventListener('click',
+        function (e) {
+
+            clearInterval(intervalId)
+            console.log("Stopped..");
+        }
+    )
+
+</script>
+
+</html>
