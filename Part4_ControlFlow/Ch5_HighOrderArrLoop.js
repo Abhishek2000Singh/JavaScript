@@ -41,7 +41,11 @@ const myObject = {
     'game2': 'godofWAR'
 }
 
-// for (const [key , value] of myObject) {
-//     console.log(key,"-:",value);
-// }  //will not iterate in this way
+for (const [key , value] of myObject) {
+    // console.log(key,"-:",value);
+}  //will not iterate in this way
+
+for (const [key , value] of Object.entries(myObject)) {
+    console.log(key,"-:",value);
+}  //will  iterate in this way
 
