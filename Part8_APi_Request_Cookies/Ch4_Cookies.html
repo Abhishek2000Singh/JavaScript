@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body style="background-color: #212121;">
+    
+</body>
+<script>
+    console.log(document.cookie);
+    document.cookie = "name=HarshitSingh2000";
+    document.cookie = "name2=AbhishekSingh2000";
+    document.cookie = "name=Abhishek"; //it will update the cookie 1
+
+    let key  = prompt("Enter your key: ")
+    let value  = prompt("Enter your value: ")
+    // document.cookie = `${key}=${value}`
+    document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+    console.log(document.cookie);
+    
+    
+</script>
+</html>

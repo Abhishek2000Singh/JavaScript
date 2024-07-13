@@ -1,0 +1,15 @@
+{
+  "name": "part14_node",
+  "version": "1.0.0",
+  "main": "module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "pdf-node": "^1.0.1"
+  }
+}

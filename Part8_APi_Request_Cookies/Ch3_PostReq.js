@@ -40,7 +40,7 @@ const mainFunc = async function () {
     }
     let todor = await createTodo(todo)
     console.log(todor);
-    console.log(await getTodo(5));
+    console.log(await getTodo(5 ));
     
 }
 

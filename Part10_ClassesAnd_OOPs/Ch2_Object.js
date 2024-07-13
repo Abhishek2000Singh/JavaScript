@@ -14,6 +14,8 @@ function createUser(username, score){
 
 createUser.prototype.increment = function () {
     this.score++;  //this matlab jisne
+    console.log(this.score);
+    
 }
 createUser.prototype.printMe  = function(){
     console.log(`score is ${this.score}`);
@@ -30,7 +32,7 @@ const chai = new createUser("chai", 25)
 const tea  = new createUser("tea",250)
 
 chai.printMe()
-// chai.increment()
+chai.increment()
 
 console.log(chai);
 console.log(tea);

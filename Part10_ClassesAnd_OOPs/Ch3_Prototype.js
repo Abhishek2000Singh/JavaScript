@@ -28,9 +28,9 @@ Array.prototype.heyHarshit= function(){
     
 }
 
-// heroPower.harshit()
-// myHeros.harshit()
-// myHeros.heyHarshit()
+heroPower.harshit()
+myHeros.harshit()
+myHeros.heyHarshit()
 // heroPower.heyHarshit() //doesnt share the power because that is only injected for arrays
 
 
@@ -72,3 +72,4 @@ String.prototype.trueLength= function(){
 anotherUsername.trueLength()
 "Harshit".trueLength()
 "ColdCoffee".trueLength()
+console.log(taSupport.__proto__);

@@ -11,7 +11,7 @@ const dc = ["superman", "flash", "batman"]
 //SPREAD OPERATOR
 
 const all_heros = [...marvel_heros, ...dc]
-// console.log(all_heros);
+console.log(all_heros);
 
 const another_array = [ 1,2,3,[4,5,6],7,[6,7,[4,5]]]
 
